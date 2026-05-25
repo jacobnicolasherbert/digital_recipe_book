@@ -1,0 +1,7 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/auth/callback/route": "app/api/auth/callback/route.js",
+  "/api/send-welcome/route": "app/api/send-welcome/route.js",
+  "/page": "app/page.js",
+  "/api/substitutions/route": "app/api/substitutions/route.js"
+}
