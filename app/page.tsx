@@ -1,5 +1,4 @@
 import { createServerClient } from "@/lib/supabase-server";
-import { getRecipeImageUrl } from "@/lib/supabase";
 import Header from "@/components/Header";
 import RecipeGrid from "@/components/RecipeGrid";
 import type { Recipe, Tag } from "@/lib/supabase";
@@ -20,7 +19,6 @@ export default async function Home() {
   // Flatten tag joins and attach computed image_url
   const formattedRecipes: Recipe[] = (recipes ?? []).map((r: any) => ({
     ...r,
-    image_url: getRecipeImageUrl(r.id),
     tags: r.recipe_tags?.map((rt: any) => rt.tags).filter(Boolean) ?? [],
   }));
 
