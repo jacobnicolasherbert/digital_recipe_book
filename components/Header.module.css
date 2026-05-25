@@ -1,0 +1,91 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  border-bottom: var(--border-subtle);
+  background: rgba(247, 240, 230, 0.8);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logoMark {
+  color: var(--rust);
+  flex-shrink: 0;
+  line-height: 0;
+}
+
+.siteLabel {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--ink-light);
+  flex: 1;
+  letter-spacing: 0.01em;
+}
+
+/* ── Auth area ── */
+.auth {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.loginBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1rem;
+  background: var(--ink);
+  color: var(--cream);
+  border: none;
+  border-radius: 6px;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.loginBtn:hover {
+  background: var(--ink-light);
+  transform: translateY(-1px);
+}
+
+.loginBtn:active {
+  transform: translateY(0);
+}
+
+.userRow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.avatar {
+  border-radius: 50%;
+  border: 2px solid var(--aged-paper);
+}
+
+.userName {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  color: var(--ink-light);
+}
+
+.logoutBtn {
+  padding: 0.3rem 0.75rem;
+  background: transparent;
+  border: var(--border-medium);
+  border-radius: 5px;
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  color: var(--ink-light);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.logoutBtn:hover {
+  border-color: var(--rust);
+  color: var(--rust);
+}
