@@ -1,0 +1,164 @@
+/*!*************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./app/globals.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************/
+:root {
+  /* Warm parchment palette */
+  --cream: #f7f0e6;
+  --parchment: #ede0cc;
+  --aged-paper: #d9c9b0;
+  --ink: #2c1f0e;
+  --ink-light: #5a3e28;
+  --rust: #b84c21;
+  --rust-light: #d4622e;
+  --sage: #6b7b5a;
+  --sage-light: #8a9b72;
+  --gold: #c49a3c;
+  --gold-light: #e0b75a;
+
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Lora", Georgia, serif;
+  --font-ui: "DM Sans", sans-serif;
+
+  --shadow-soft: 0 2px 12px rgba(44, 31, 14, 0.08);
+  --shadow-card: 0 4px 24px rgba(44, 31, 14, 0.12);
+  --shadow-lifted: 0 8px 40px rgba(44, 31, 14, 0.18);
+  --border-subtle: 1px solid rgba(44, 31, 14, 0.1);
+  --border-medium: 1px solid rgba(44, 31, 14, 0.2);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.7;
+  min-height: 100vh;
+  /* Subtle paper texture via repeating gradient */
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(196, 154, 60, 0.04) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(184, 76, 33, 0.04) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  line-height: 1.25;
+  color: var(--ink);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-ui);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--parchment);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--aged-paper);
+  border-radius: 3px;
+}
+
+/* Decorative divider utility */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--aged-paper), transparent);
+}
+.divider span {
+  font-family: var(--font-display);
+  color: var(--gold);
+  font-size: 1.2rem;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid var(--rust);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ── Sonner toast overrides ── */
+[data-sonner-toaster] {
+  --width: 360px;
+}
+
+[data-sonner-toast] {
+  font-family: var(--font-ui) !important;
+  border-radius: 10px !important;
+  box-shadow: 0 8px 32px rgba(44, 31, 14, 0.15) !important;
+  border: 1px solid rgba(44, 31, 14, 0.08) !important;
+  background: #fff !important;
+  color: var(--ink) !important;
+  padding: 14px 16px !important;
+  gap: 10px !important;
+}
+
+/* Success — left accent + green icon */
+[data-sonner-toast][data-type="success"] {
+  border-left: 4px solid #4a7c59 !important;
+}
+
+[data-sonner-toast][data-type="success"] [data-icon] svg {
+  color: #4a7c59 !important;
+}
+
+/* Error — left accent + red icon */
+[data-sonner-toast][data-type="error"] {
+  border-left: 4px solid #b84c21 !important;
+}
+
+[data-sonner-toast][data-type="error"] [data-icon] svg {
+  color: #b84c21 !important;
+}
+
+[data-sonner-toast] [data-title] {
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  color: var(--ink) !important;
+}
+
+[data-sonner-toast] [data-description] {
+  font-size: 0.8rem !important;
+  color: var(--ink-light) !important;
+}
+
+[data-sonner-toast] [data-close-button] {
+  background: transparent !important;
+  border: var(--border-medium) !important;
+  color: var(--ink-light) !important;
+}
+
